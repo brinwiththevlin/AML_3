@@ -6,38 +6,79 @@ from typing import List, Literal, Optional, Dict
 
 def buildKernel(D: np.ndarray, type: Literal["dot", "poly"]):
     if type == "dot":
+        kernel = np.matmul(D, D.T)
+
         return np.matmul(D, D.T)
     else:
         return (np.matmul(D, D.T) + 1) ** 2
 
 
+def part2_stem(vocab: List[str]):
+    add = [term for term in vocab if "add" in term]
+    sub = [term for term in vocab if "sub" in term]
+    mul = [term for term in vocab if "mul" in term]
+    div = [term for term in vocab if "div" in term]
+    jump = [term for term in vocab if term.startswith("j")]
+    push = [term for term in vocab if "push" in term]
+    mov = [term for term in vocab if "mov" in term]
+    num = [term for term in vocab if term.isnumeric()]
+
+    new_vocab = {}
+    new_vocab.update(dict.fromkeys(add, "add"))
+    new_vocab.update(dict.fromkeys(sub, "sub"))
+    new_vocab.update(dict.fromkeys(mul, "mul"))
+    new_vocab.update(dict.fromkeys(div, "div"))
+    new_vocab.update(dict.fromkeys(jump, "jump"))
+    new_vocab.update(dict.fromkeys(push, "push"))
+    new_vocab.update(dict.fromkeys(mov, "mov"))
+    new_vocab.update(dict.fromkeys(num, "num"))
+    return new_vocab
+
+
+def part3_stem(vocab: List[str]):
+    arith = [
+        term for term in vocab if any(s in term for s in ["add", "sub", "mul", "div"])
+    ]
+    jump = [term for term in vocab if term.startswith("j")]
+    data = [term for term in vocab if any(s in term for s in ["mov", "push"])]
+    num = [term for term in vocab if term.isnumeric()]
+
+    new_vocab = {}
+    new_vocab.update(dict.fromkeys(num, "num"))
+    new_vocab.update(dict.fromkeys(arith, "arith"))
+    new_vocab.update(dict.fromkeys(jump, "jump"))
+    new_vocab.update(dict.fromkeys(data, "data"))
+
+    return new_vocab
+
+
 def dictionary(
     files: List[str],
-    stem: Optional[bool] = None,
-    adv_stem: Optional[Dict[str, str]] = None,
+    stem: Optional[bool] = False,
+    adv_stem: Optional[bool] = False,
 ):
-    assert type(stem) in [bool, None], "stem must be boolean"
+    assert type(stem) in [bool, False], "stem must be boolean"
+    assert type(adv_stem) in [bool, False], "adv_stem must be boolean"
 
     # dictionary of terms across all files
-    vocabulary = set()
-    [vocabulary := vocabulary.union(set(open(f).read().split())) for f in files]
-    vocabulary = list(vocabulary)
+    vocab = set()
+    [vocab := vocab.union(set(open(f).read().split())) for f in files]
+    vocab = list(vocab)
 
-    vectors: List[np.ndarray] = [vectorize(f, vocabulary) for f in files]
+    vectors: List[np.ndarray] = [vectorize(f, vocab) for f in files]
     # revise dictionary
     stop_indexes = findStopWords(vectors)
 
+    vocab = [vocab[i] for i in range(len(vocab)) if i not in stop_indexes]
+
     if stem:
         # TODO: implement stemming for part 2
-        pass
+        vocab = part2_stem(vocab)
     elif adv_stem:
         # TODO: implement stemming for part 3
-        pass
-    vocabulary = [
-        vocabulary[i] for i in range(len(vocabulary)) if i not in stop_indexes
-    ]
+        vocab = part3_stem(vocab)
 
-    return vocabulary
+    return vocab
 
 
 def vectorize(filename: str, dict: List[str]) -> np.ndarray:
@@ -45,12 +86,13 @@ def vectorize(filename: str, dict: List[str]) -> np.ndarray:
     content = f.read().split()
     vector = [content.count(word) for word in dict]
     np_vector = np.array(vector)
-    return np_vector
+    # normalize to avoid overflow errors
+    return np_vector / np.linalg.norm(np_vector)
 
 
 def findStopWords(vectors: List[np.ndarray]) -> list:
     """returns the index of the stop words"""
-    top_ten_sets = [set(np.argsort(v)[:3]) for v in vectors]
+    top_ten_sets = [set(np.argsort(v)[:5]) for v in vectors]
     common_indexes = set.intersection(*top_ten_sets)
     return list(common_indexes)
 
