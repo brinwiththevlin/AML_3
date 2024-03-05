@@ -1,16 +1,6 @@
+from typing import List, Optional
 import numpy as np
-from collections import Counter
-import re
-from typing import List, Literal, Optional, Dict
-
-
-def buildKernel(D: np.ndarray, type: Literal["dot", "poly"]):
-    if type == "dot":
-        kernel = np.matmul(D, D.T)
-
-        return np.matmul(D, D.T)
-    else:
-        return (np.matmul(D, D.T) + 1) ** 2
+import vectorize
 
 
 def part2_stem(vocab: List[str]):
@@ -65,7 +55,7 @@ def dictionary(
     [vocab := vocab.union(set(open(f).read().split())) for f in files]
     vocab = list(vocab)
 
-    vectors: List[np.ndarray] = [vectorize(f, vocab) for f in files]
+    vectors: List[np.ndarray] = [vectorize.vectorize(f, vocab) for f in files]
     # revise dictionary
     stop_indexes = findStopWords(vectors)
 
@@ -81,60 +71,8 @@ def dictionary(
     return vocab
 
 
-def vectorize(filename: str, dict: List[str]) -> np.ndarray:
-    f = open(filename)
-    content = f.read().split()
-    vector = [content.count(word) for word in dict]
-    np_vector = np.array(vector)
-    # normalize to avoid overflow errors
-    return np_vector / np.linalg.norm(np_vector)
-
-
 def findStopWords(vectors: List[np.ndarray]) -> list:
     """returns the index of the stop words"""
     top_ten_sets = [set(np.argsort(v)[:5]) for v in vectors]
     common_indexes = set.intersection(*top_ten_sets)
     return list(common_indexes)
-
-
-def classCounts(files: List[str]) -> Counter:
-    # Regular expression pattern to extract class information
-    pattern = r"(\d+)-"
-
-    # Use list comprehension to extract class information from each file name
-    class_numbers = [int(re.search(pattern, file_name).group(1)) for file_name in files]
-    return Counter(class_numbers)
-
-
-def extractSubmatrices(
-    K: np.ndarray, class_sizes: Counter, class_keys: List[int]
-) -> np.ndarray:
-
-    starts = [0]
-    for key in class_keys[:-1]:
-        starts.append(starts[-1] + class_sizes[key])
-
-    sub_matrices = {
-        key: K[
-            starts[i] : starts[i] + class_sizes[key],
-            starts[i] : starts[i] + class_sizes[key],
-        ]
-        for i, key in enumerate(class_keys)
-    }
-    return sub_matrices
-
-
-def descriptiveStats(kernel_mat: np.ndarray, class_label: str) -> None:
-    mean_value = np.mean(kernel_mat)
-    median_value = np.median(kernel_mat)
-    std_deviation = np.std(kernel_mat)
-    min_value = np.min(kernel_mat)
-    max_value = np.max(kernel_mat)
-
-    print("class_matrix", class_label)
-    print("Mean:", mean_value)
-    print("Median:", median_value)
-    print("Standard Deviation:", std_deviation)
-    print("Minimum Value:", min_value)
-    print("Maximum Value:", max_value)
-    print()
