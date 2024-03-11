@@ -1,9 +1,31 @@
 import kernel
+import spectral
 import vectorize
 import vocab
 import numpy as np
 import os
 from typing import List
+
+
+def silhouette(K: np.ndarray, clusters: np.ndarray) -> float:
+    """
+    Compute the silhouette score
+    """
+    # compute average distane between points in the same cluster
+    d = np.zeros(K.shape[0])
+    for i in range(K.shape[0]):
+        d[i] = np.mean(K[i, clusters == clusters[i]])
+
+    # compute the smallest average distance between a point and any other cluster
+    D = np.zeros(K.shape[0])
+    for i in range(K.shape[0]):
+        D[i] = np.min(
+            [np.mean(K[i, clusters == j]) for j in set(clusters) if j != clusters[i]]
+        )
+
+    # compute the silhouette score
+    s = (D - d) / np.maximum(d, D)
+    return np.mean(s)
 
 
 if __name__ == "__main__":
@@ -31,6 +53,10 @@ if __name__ == "__main__":
         kernel.descriptiveStats(kernel_mat, class_label)
         for class_label, kernel_mat in sub_matrices.items()
     ]
+    # TODO print silhouette score, repeat for poly kernel  and for parts 2 and 3
+    for k in range(2, 5):
+        clusters = spectral.spectralClustering(K0, k)
+        silhouette_score = silhouette(K0, clusters)
 
     Kp = kernel.buildKernel(D, "poly")
 

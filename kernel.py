@@ -1,12 +1,10 @@
 import numpy as np
 from collections import Counter
-import re
-from typing import List, Literal, Optional, Dict
+from typing import List, Literal
 
 
 def buildKernel(D: np.ndarray, type: Literal["dot", "poly"]):
     if type == "dot":
-        kernel = np.matmul(D, D.T)
 
         return np.matmul(D, D.T)
     else:
@@ -23,8 +21,8 @@ def extractSubmatrices(
 
     sub_matrices = {
         key: K[
-            starts[i] : starts[i] + class_sizes[key],
-            starts[i] : starts[i] + class_sizes[key],
+            starts[i]: starts[i] + class_sizes[key],
+            starts[i]: starts[i] + class_sizes[key],
         ]
         for i, key in enumerate(class_keys)
     }
