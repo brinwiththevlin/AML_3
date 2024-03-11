@@ -53,10 +53,12 @@ if __name__ == "__main__":
         kernel.descriptiveStats(kernel_mat, class_label)
         for class_label, kernel_mat in sub_matrices.items()
     ]
-    # TODO print silhouette score, repeat for poly kernel  and for parts 2 and 3
+
     for k in range(2, 5):
         clusters = spectral.spectralClustering(K0, k)
         silhouette_score = silhouette(K0, clusters)
+        print(f"spectral clustering k={k}")
+        print(f"silhouette score: {silhouette_score}")
 
     Kp = kernel.buildKernel(D, "poly")
 
@@ -67,6 +69,11 @@ if __name__ == "__main__":
         for class_label, kernel_mat in sub_matrices.items()
     ]
 
+    for k in range(2, 5):
+        clusters = spectral.spectralClustering(Kp, k)
+        silhouette_score = silhouette(Kp, clusters)
+        print(f"spectral clustering k={k}")
+        print(f"silhouette score: {silhouette_score}")
     """part 2"""
     print("PART 2!!:")
     # dictionary of terms across all files
@@ -86,6 +93,11 @@ if __name__ == "__main__":
         for class_label, kernel_mat in sub_matrices.items()
     ]
 
+    for k in range(2, 5):
+        clusters = spectral.spectralClustering(K0, k)
+        silhouette_score = silhouette(K0, clusters)
+        print(f"spectral clustering k={k}")
+        print(f"silhouette score: {silhouette_score}")
     Kp = kernel.buildKernel(D, "poly")
 
     print("poly kernel")
@@ -94,6 +106,11 @@ if __name__ == "__main__":
         kernel.descriptiveStats(kernel_mat, class_label)
         for class_label, kernel_mat in sub_matrices.items()
     ]
+    for k in range(2, 5):
+        clusters = spectral.spectralClustering(Kp, k)
+        silhouette_score = silhouette(Kp, clusters)
+        print(f"spectral clustering k={k}")
+        print(f"silhouette score: {silhouette_score}")
 
     """part 3"""
     print("PART 3!!:")
@@ -114,6 +131,11 @@ if __name__ == "__main__":
         for class_label, kernel_mat in sub_matrices.items()
     ]
 
+    for k in range(2, 5):
+        clusters = spectral.spectralClustering(K0, k)
+        silhouette_score = silhouette(K0, clusters)
+        print(f"spectral clustering k={k}")
+        print(f"silhouette score: {silhouette_score}")
     Kp = kernel.buildKernel(D, "poly")
 
     print("poly kernel")
@@ -122,3 +144,9 @@ if __name__ == "__main__":
         kernel.descriptiveStats(kernel_mat, class_label)
         for class_label, kernel_mat in sub_matrices.items()
     ]
+
+    for k in range(2, 5):
+        clusters = spectral.spectralClustering(Kp, k)
+        silhouette_score = silhouette(Kp, clusters)
+        print(f"spectral clustering k={k}")
+        print(f"silhouette score: {silhouette_score}")
