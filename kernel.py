@@ -1,6 +1,6 @@
 import numpy as np
 from collections import Counter
-from typing import List, Literal
+from typing import List, Literal, TextIO
 
 
 def buildKernel(D: np.ndarray, type: Literal["dot", "poly"]):
@@ -29,17 +29,18 @@ def extractSubmatrices(
     return sub_matrices
 
 
-def descriptiveStats(kernel_mat: np.ndarray, class_label: str) -> None:
+def descriptiveStats(kernel_mat: np.ndarray, class_label: str, results: TextIO) -> None:
     mean_value = np.mean(kernel_mat)
     median_value = np.median(kernel_mat)
     std_deviation = np.std(kernel_mat)
     min_value = np.min(kernel_mat)
     max_value = np.max(kernel_mat)
 
-    print("class_matrix", class_label)
-    print("Mean:", mean_value)
-    print("Median:", median_value)
-    print("Standard Deviation:", std_deviation)
-    print("Minimum Value:", min_value)
-    print("Maximum Value:", max_value)
-    print()
+    results.writelines(f"class_matrix: {class_label}\n")
+    results.writelines(f"Mean: {mean_value}\n")
+    results.writelines(f"Median: {median_value}\n")
+    results.writelines(f"Standard Deviation: {std_deviation}\n")
+    results.writelines(f"Minimum Value: {min_value}\n")
+    results.writelines(f"Maximum Value: {max_value}\n")
+    results.writelines("\n")
+

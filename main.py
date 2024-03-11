@@ -20,7 +20,8 @@ def silhouette(K: np.ndarray, clusters: np.ndarray) -> float:
     D = np.zeros(K.shape[0])
     for i in range(K.shape[0]):
         D[i] = np.min(
-            [np.mean(K[i, clusters == j]) for j in set(clusters) if j != clusters[i]]
+            [np.mean(K[i, clusters == j])
+             for j in set(clusters) if j != clusters[i]]
         )
 
     # compute the silhouette score
@@ -29,14 +30,15 @@ def silhouette(K: np.ndarray, clusters: np.ndarray) -> float:
 
 
 if __name__ == "__main__":
+
     # list of filenames
     files = [f"./data/{f}" for f in os.listdir("./data")]
     files.remove("./data/.DS_Store")
     class_sizes = vectorize.classCounts(files)
     class_keys = sorted(list(class_sizes.keys()))
-
+    results = open("results.txt", "w")
     """part 1"""
-    print("PART 1!!:")
+    results.writelines("PART 1!!:\n")
     # dictionary of terms across all files
     D0 = vocab.dictionary(files)
     # re-vectorize with revised dictionay
@@ -47,35 +49,38 @@ if __name__ == "__main__":
 
     # K is the kernel matrix
     K0 = kernel.buildKernel(D, "dot")
-    print("dot kernel")
+    results.writelines("dot kernel\n")
     sub_matrices = kernel.extractSubmatrices(K0, class_sizes, class_keys)
     [
-        kernel.descriptiveStats(kernel_mat, class_label)
+        kernel.descriptiveStats(kernel_mat, class_label, results)
         for class_label, kernel_mat in sub_matrices.items()
     ]
 
     for k in range(2, 5):
         clusters = spectral.spectralClustering(K0, k)
         silhouette_score = silhouette(K0, clusters)
-        print(f"spectral clustering k={k}")
-        print(f"silhouette score: {silhouette_score}")
+        results.writelines(f"spectral clustering k={k}\n")
+        results.writelines(f"silhouette score: {silhouette_score}\n")
+        results.writelines("\n")
 
     Kp = kernel.buildKernel(D, "poly")
 
-    print("poly kernel")
+    results.writelines("poly kernel\n")
     sub_matrices = kernel.extractSubmatrices(Kp, class_sizes, class_keys)
     [
-        kernel.descriptiveStats(kernel_mat, class_label)
+        kernel.descriptiveStats(kernel_mat, class_label, results)
         for class_label, kernel_mat in sub_matrices.items()
     ]
 
     for k in range(2, 5):
         clusters = spectral.spectralClustering(Kp, k)
         silhouette_score = silhouette(Kp, clusters)
-        print(f"spectral clustering k={k}")
-        print(f"silhouette score: {silhouette_score}")
+        results.writelines(f"spectral clustering k={k}\n")
+        results.writelines(f"silhouette score: {silhouette_score}\n")
+        results.writelines("\n")
+
     """part 2"""
-    print("PART 2!!:")
+    results.writelines("PART 2!!:\n")
     # dictionary of terms across all files
     D1 = vocab.dictionary(files, stem=True)
     # re-vectorize with revised dictionay
@@ -86,34 +91,38 @@ if __name__ == "__main__":
 
     # K is the kernel matrix
     K0 = kernel.buildKernel(D, "dot")
-    print("dot kernel")
+    results.writelines("dot kernel\n")
     sub_matrices = kernel.extractSubmatrices(K0, class_sizes, class_keys)
     [
-        kernel.descriptiveStats(kernel_mat, class_label)
+        kernel.descriptiveStats(kernel_mat, class_label, results)
         for class_label, kernel_mat in sub_matrices.items()
     ]
 
     for k in range(2, 5):
         clusters = spectral.spectralClustering(K0, k)
         silhouette_score = silhouette(K0, clusters)
-        print(f"spectral clustering k={k}")
-        print(f"silhouette score: {silhouette_score}")
+        results.writelines(f"spectral clustering k={k}\n")
+        results.writelines(f"silhouette score: {silhouette_score}\n")
+        results.writelines("\n")
+
     Kp = kernel.buildKernel(D, "poly")
 
-    print("poly kernel")
+    results.writelines("poly kernel\n")
     sub_matrices = kernel.extractSubmatrices(Kp, class_sizes, class_keys)
     [
-        kernel.descriptiveStats(kernel_mat, class_label)
+        kernel.descriptiveStats(kernel_mat, class_label, results)
         for class_label, kernel_mat in sub_matrices.items()
     ]
+
     for k in range(2, 5):
         clusters = spectral.spectralClustering(Kp, k)
         silhouette_score = silhouette(Kp, clusters)
-        print(f"spectral clustering k={k}")
-        print(f"silhouette score: {silhouette_score}")
+        results.writelines(f"spectral clustering k={k}\n")
+        results.writelines(f"silhouette score: {silhouette_score}\n")
+        results.writelines("\n")
 
     """part 3"""
-    print("PART 3!!:")
+    results.writelines("PART 3!!:\n")
     # dictionary of terms across all files
     D2 = vocab.dictionary(files, stem=True)
     # re-vectorize with revised dictionay
@@ -124,29 +133,34 @@ if __name__ == "__main__":
 
     # K is the kernel matrix
     K0 = kernel.buildKernel(D, "dot")
-    print("dot kernel")
+    results.writelines("dot kernel\n")
     sub_matrices = kernel.extractSubmatrices(K0, class_sizes, class_keys)
     [
-        kernel.descriptiveStats(kernel_mat, class_label)
+        kernel.descriptiveStats(kernel_mat, class_label, results)
         for class_label, kernel_mat in sub_matrices.items()
     ]
 
     for k in range(2, 5):
         clusters = spectral.spectralClustering(K0, k)
         silhouette_score = silhouette(K0, clusters)
-        print(f"spectral clustering k={k}")
-        print(f"silhouette score: {silhouette_score}")
+        results.writelines(f"spectral clustering k={k}\n")
+        results.writelines(f"silhouette score: {silhouette_score}\n")
+        results.writelines("\n")
+
     Kp = kernel.buildKernel(D, "poly")
 
-    print("poly kernel")
+    results.writelines("poly kernel\n")
     sub_matrices = kernel.extractSubmatrices(Kp, class_sizes, class_keys)
     [
-        kernel.descriptiveStats(kernel_mat, class_label)
+        kernel.descriptiveStats(kernel_mat, class_label, results)
         for class_label, kernel_mat in sub_matrices.items()
     ]
 
     for k in range(2, 5):
         clusters = spectral.spectralClustering(Kp, k)
         silhouette_score = silhouette(Kp, clusters)
-        print(f"spectral clustering k={k}")
-        print(f"silhouette score: {silhouette_score}")
+        results.writelines(f"spectral clustering k={k}\n")
+        results.writelines(f"silhouette score: {silhouette_score}\n")
+        results.writelines("\n")
+
+    results.close()

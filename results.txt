@@ -1,0 +1,273 @@
+PART 1!!:
+dot kernel
+class_matrix: 1
+Mean: 1.0
+Median: 1.0
+Standard Deviation: 0.0
+Minimum Value: 1.0
+Maximum Value: 1.0
+
+class_matrix: 2
+Mean: 0.9170237743470673
+Median: 0.95907559158804
+Standard Deviation: 0.09911813791729149
+Minimum Value: 0.6597209890547722
+Maximum Value: 1.0000000000000002
+
+class_matrix: 3
+Mean: 0.9560965860095988
+Median: 0.9681040498804204
+Standard Deviation: 0.047237884945700824
+Minimum Value: 0.8178435003702881
+Maximum Value: 1.0000000000000002
+
+class_matrix: 6
+Mean: 0.831694900526873
+Median: 0.8574028189717128
+Standard Deviation: 0.14846944335553403
+Minimum Value: 0.5277783740538393
+Maximum Value: 1.0000000000000002
+
+class_matrix: 7
+Mean: 0.49341075513403226
+Median: 0.25318246846549075
+Standard Deviation: 0.4519936051988533
+Minimum Value: 0.0
+Maximum Value: 1.0
+
+spectral clustering k=2
+silhouette score: -0.08854457491689655
+
+spectral clustering k=3
+silhouette score: -0.13198273276599037
+
+spectral clustering k=4
+silhouette score: -0.19800394373695523
+
+poly kernel
+class_matrix: 1
+Mean: 4.0
+Median: 4.0
+Standard Deviation: 0.0
+Minimum Value: 4.0
+Maximum Value: 4.0
+
+class_matrix: 2
+Mean: 3.6848045566760668
+Median: 3.837977173556029
+Standard Deviation: 0.3679319810915143
+Minimum Value: 2.754673761508951
+Maximum Value: 4.0
+
+class_matrix: 3
+Mean: 3.8285452715725516
+Median: 3.8734341879487246
+Standard Deviation: 0.18123624299897503
+Minimum Value: 3.304554991838502
+Maximum Value: 4.0
+
+class_matrix: 6
+Mean: 3.3771493842264535
+Median: 3.4523866684509485
+Standard Deviation: 0.5286414468189526
+Minimum Value: 2.334106760226593
+Maximum Value: 4.0
+
+class_matrix: 7
+Mean: 2.434573902690657
+Median: 1.5704662992692604
+Standard Deviation: 1.3793417125402723
+Minimum Value: 1.0
+Maximum Value: 4.0
+
+spectral clustering k=2
+silhouette score: -0.05797800889076874
+
+spectral clustering k=3
+silhouette score: -0.0472948290888435
+
+spectral clustering k=4
+silhouette score: -0.16331828189467615
+
+PART 2!!:
+dot kernel
+class_matrix: 1
+Mean: 0.9999999999999998
+Median: 0.9999999999999998
+Standard Deviation: 0.0
+Minimum Value: 0.9999999999999998
+Maximum Value: 0.9999999999999998
+
+class_matrix: 2
+Mean: 0.9512996822656108
+Median: 0.9730429219996204
+Standard Deviation: 0.057624777320871304
+Minimum Value: 0.7928042646298192
+Maximum Value: 1.0000000000000002
+
+class_matrix: 3
+Mean: 0.9753559981960279
+Median: 0.9740925564128637
+Standard Deviation: 0.020054907710913106
+Minimum Value: 0.923509900430654
+Maximum Value: 1.0000000000000002
+
+class_matrix: 6
+Mean: 0.8587213267390434
+Median: 0.9481852759627538
+Standard Deviation: 0.15794920434732357
+Minimum Value: 0.5673488590718372
+Maximum Value: 1.0000000000000002
+
+class_matrix: 7
+Mean: 0.5054497958777128
+Median: 0.3039296022093436
+Standard Deviation: 0.44749606750695176
+Minimum Value: 0.0
+Maximum Value: 1.0000000000000002
+
+spectral clustering k=2
+silhouette score: 0.0507299662630699
+
+spectral clustering k=3
+silhouette score: -0.02773882831587455
+
+spectral clustering k=4
+silhouette score: -0.19682084370956407
+
+poly kernel
+class_matrix: 1
+Mean: 3.999999999999999
+Median: 3.999999999999999
+Standard Deviation: 0.0
+Minimum Value: 3.999999999999999
+Maximum Value: 3.999999999999999
+
+class_matrix: 2
+Mean: 3.810891064971154
+Median: 3.8928983720528003
+Standard Deviation: 0.2206607955000648
+Minimum Value: 3.214147131274867
+Maximum Value: 4.0
+
+class_matrix: 3
+Mean: 3.9024335189323187
+Median: 3.89704142265931
+Standard Deviation: 0.07903729518548461
+Minimum Value: 3.6998903370547445
+Maximum Value: 4.0
+
+class_matrix: 6
+Mean: 3.479792921628502
+Median: 3.7954913558220715
+Standard Deviation: 0.5691685150998631
+Minimum Value: 2.45658244603379
+Maximum Value: 4.0
+
+class_matrix: 7
+Mean: 2.466631818342434
+Median: 1.700232407517817
+Standard Deviation: 1.3672311062273048
+Minimum Value: 1.0
+Maximum Value: 4.0
+
+spectral clustering k=2
+silhouette score: -0.04528277611668971
+
+spectral clustering k=3
+silhouette score: -0.07698521401328724
+
+spectral clustering k=4
+silhouette score: -0.08484662330170732
+
+PART 3!!:
+dot kernel
+class_matrix: 1
+Mean: 0.9999999999999998
+Median: 0.9999999999999998
+Standard Deviation: 0.0
+Minimum Value: 0.9999999999999998
+Maximum Value: 0.9999999999999998
+
+class_matrix: 2
+Mean: 0.9512996822656108
+Median: 0.9730429219996204
+Standard Deviation: 0.057624777320871304
+Minimum Value: 0.7928042646298192
+Maximum Value: 1.0000000000000002
+
+class_matrix: 3
+Mean: 0.9753559981960279
+Median: 0.9740925564128637
+Standard Deviation: 0.020054907710913106
+Minimum Value: 0.923509900430654
+Maximum Value: 1.0000000000000002
+
+class_matrix: 6
+Mean: 0.8587213267390434
+Median: 0.9481852759627538
+Standard Deviation: 0.15794920434732357
+Minimum Value: 0.5673488590718372
+Maximum Value: 1.0000000000000002
+
+class_matrix: 7
+Mean: 0.5054497958777128
+Median: 0.3039296022093436
+Standard Deviation: 0.44749606750695176
+Minimum Value: 0.0
+Maximum Value: 1.0000000000000002
+
+spectral clustering k=2
+silhouette score: 0.0507299662630699
+
+spectral clustering k=3
+silhouette score: -0.0564392418859859
+
+spectral clustering k=4
+silhouette score: -0.4483034215684563
+
+poly kernel
+class_matrix: 1
+Mean: 3.999999999999999
+Median: 3.999999999999999
+Standard Deviation: 0.0
+Minimum Value: 3.999999999999999
+Maximum Value: 3.999999999999999
+
+class_matrix: 2
+Mean: 3.810891064971154
+Median: 3.8928983720528003
+Standard Deviation: 0.2206607955000648
+Minimum Value: 3.214147131274867
+Maximum Value: 4.0
+
+class_matrix: 3
+Mean: 3.9024335189323187
+Median: 3.89704142265931
+Standard Deviation: 0.07903729518548461
+Minimum Value: 3.6998903370547445
+Maximum Value: 4.0
+
+class_matrix: 6
+Mean: 3.479792921628502
+Median: 3.7954913558220715
+Standard Deviation: 0.5691685150998631
+Minimum Value: 2.45658244603379
+Maximum Value: 4.0
+
+class_matrix: 7
+Mean: 2.466631818342434
+Median: 1.700232407517817
+Standard Deviation: 1.3672311062273048
+Minimum Value: 1.0
+Maximum Value: 4.0
+
+spectral clustering k=2
+silhouette score: -0.04528277611668971
+
+spectral clustering k=3
+silhouette score: -0.09626075529879664
+
+spectral clustering k=4
+silhouette score: -0.1735341640269269
+
