@@ -19,5 +19,4 @@ def vectorize(filename: str, dict: List[str]) -> np.ndarray:
     content = f.read().split()
     vector = [content.count(word) for word in dict]
     np_vector = np.array(vector, dtype=np.float64)
-    # normalize to avoid overflow errors
     return np_vector
