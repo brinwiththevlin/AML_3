@@ -1,273 +1,273 @@
 PART 1!!:
 dot kernel
 class_matrix: 1
-Mean: 1.0
-Median: 1.0
+Mean: 44688507.0
+Median: 44688507.0
 Standard Deviation: 0.0
-Minimum Value: 1.0
-Maximum Value: 1.0
+Minimum Value: 44688507.0
+Maximum Value: 44688507.0
 
 class_matrix: 2
-Mean: 0.9170237743470673
-Median: 0.95907559158804
-Standard Deviation: 0.09911813791729149
-Minimum Value: 0.6597209890547722
-Maximum Value: 1.0000000000000002
+Mean: 93199874.6122449
+Median: 11544829.0
+Standard Deviation: 311484467.5106672
+Minimum Value: 592990.0
+Maximum Value: 2120831379.0
 
 class_matrix: 3
-Mean: 0.9560965860095988
-Median: 0.9681040498804204
-Standard Deviation: 0.047237884945700824
-Minimum Value: 0.8178435003702881
-Maximum Value: 1.0000000000000002
+Mean: 443357.08
+Median: 339719.0
+Standard Deviation: 338497.8522679776
+Minimum Value: 127770.0
+Maximum Value: 2882809.0
 
 class_matrix: 6
-Mean: 0.831694900526873
-Median: 0.8574028189717128
-Standard Deviation: 0.14846944335553403
-Minimum Value: 0.5277783740538393
-Maximum Value: 1.0000000000000002
+Mean: 681860.4375
+Median: 479433.5
+Standard Deviation: 658661.7063671579
+Minimum Value: 143651.0
+Maximum Value: 2834812.0
 
 class_matrix: 7
-Mean: 0.49341075513403226
-Median: 0.25318246846549075
-Standard Deviation: 0.4519936051988533
+Mean: 127975.72
+Median: 71977.0
+Standard Deviation: 249007.74030114326
 Minimum Value: 0.0
-Maximum Value: 1.0
+Maximum Value: 961139.0
 
 spectral clustering k=2
-silhouette score: -0.08854457491689655
+silhouette score: 0.5424089619095536
 
 spectral clustering k=3
-silhouette score: -0.13198273276599037
+silhouette score: -0.520366289024476
 
 spectral clustering k=4
-silhouette score: -0.19800394373695523
+silhouette score: -0.3939736143467031
 
 poly kernel
 class_matrix: 1
-Mean: 4.0
-Median: 4.0
+Mean: 1997062747266064.0
+Median: 1997062747266064.0
 Standard Deviation: 0.0
-Minimum Value: 4.0
-Maximum Value: 4.0
+Minimum Value: 1997062747266064.0
+Maximum Value: 1997062747266064.0
 
 class_matrix: 2
-Mean: 3.6848045566760668
-Median: 3.837977173556029
-Standard Deviation: 0.3679319810915143
-Minimum Value: 2.754673761508951
-Maximum Value: 4.0
+Mean: 1.0570879031454181e+17
+Median: 133283099728900.0
+Standard Deviation: 6.36172905665562e+17
+Minimum Value: 351638326081.0
+Maximum Value: 4.4979257423927045e+18
 
 class_matrix: 3
-Mean: 3.8285452715725516
-Median: 3.8734341879487246
-Standard Deviation: 0.18123624299897503
-Minimum Value: 3.304554991838502
-Maximum Value: 4.0
+Mean: 311147183091.32
+Median: 115409678400.0
+Standard Deviation: 849747417959.1481
+Minimum Value: 16325428441.0
+Maximum Value: 8310593496100.0
 
 class_matrix: 6
-Mean: 3.3771493842264535
-Median: 3.4523866684509485
-Standard Deviation: 0.5286414468189526
-Minimum Value: 2.334106760226593
-Maximum Value: 4.0
+Mean: 898770263384.0625
+Median: 229905651982.5
+Standard Deviation: 1920249292627.89
+Minimum Value: 20635897104.0
+Maximum Value: 8036164744969.0
 
 class_matrix: 7
-Mean: 2.434573902690657
-Median: 1.5704662992692604
-Standard Deviation: 1.3793417125402723
+Mean: 78382895591.84
+Median: 5180832484.0
+Standard Deviation: 249328835289.98972
 Minimum Value: 1.0
-Maximum Value: 4.0
+Maximum Value: 923790099600.0
 
 spectral clustering k=2
-silhouette score: -0.05797800889076874
+silhouette score: 0.4468168836852343
 
 spectral clustering k=3
-silhouette score: -0.0472948290888435
+silhouette score: -0.6187588948716103
 
 spectral clustering k=4
-silhouette score: -0.16331828189467615
+silhouette score: -0.6245173996640986
 
 PART 2!!:
 dot kernel
 class_matrix: 1
-Mean: 0.9999999999999998
-Median: 0.9999999999999998
+Mean: 36343885.0
+Median: 36343885.0
 Standard Deviation: 0.0
-Minimum Value: 0.9999999999999998
-Maximum Value: 0.9999999999999998
+Minimum Value: 36343885.0
+Maximum Value: 36343885.0
 
 class_matrix: 2
-Mean: 0.9512996822656108
-Median: 0.9730429219996204
-Standard Deviation: 0.057624777320871304
-Minimum Value: 0.7928042646298192
-Maximum Value: 1.0000000000000002
+Mean: 84707314.1632653
+Median: 10033767.0
+Standard Deviation: 267630438.51785988
+Minimum Value: 497384.0
+Maximum Value: 1790510980.0
 
 class_matrix: 3
-Mean: 0.9753559981960279
-Median: 0.9740925564128637
-Standard Deviation: 0.020054907710913106
-Minimum Value: 0.923509900430654
-Maximum Value: 1.0000000000000002
+Mean: 342426.13
+Median: 245530.0
+Standard Deviation: 302749.2850652386
+Minimum Value: 101411.0
+Maximum Value: 2527424.0
 
 class_matrix: 6
-Mean: 0.8587213267390434
-Median: 0.9481852759627538
-Standard Deviation: 0.15794920434732357
-Minimum Value: 0.5673488590718372
-Maximum Value: 1.0000000000000002
+Mean: 562501.625
+Median: 370874.0
+Standard Deviation: 542192.5743252893
+Minimum Value: 90363.0
+Maximum Value: 2294845.0
 
 class_matrix: 7
-Mean: 0.5054497958777128
-Median: 0.3039296022093436
-Standard Deviation: 0.44749606750695176
+Mean: 112369.32
+Median: 63744.0
+Standard Deviation: 231279.40933558613
 Minimum Value: 0.0
-Maximum Value: 1.0000000000000002
+Maximum Value: 961127.0
 
 spectral clustering k=2
-silhouette score: 0.0507299662630699
+silhouette score: 0.7114378991749604
 
 spectral clustering k=3
-silhouette score: -0.02773882831587455
+silhouette score: 0.5191548145181609
 
 spectral clustering k=4
-silhouette score: -0.19682084370956407
+silhouette score: -0.34234570543561926
 
 poly kernel
 class_matrix: 1
-Mean: 3.999999999999999
-Median: 3.999999999999999
+Mean: 1320878049580996.0
+Median: 1320878049580996.0
 Standard Deviation: 0.0
-Minimum Value: 3.999999999999999
-Maximum Value: 3.999999999999999
+Minimum Value: 1320878049580996.0
+Maximum Value: 1320878049580996.0
 
 class_matrix: 2
-Mean: 3.810891064971154
-Median: 3.8928983720528003
-Standard Deviation: 0.2206607955000648
-Minimum Value: 3.214147131274867
-Maximum Value: 4.0
+Mean: 7.880138086343074e+16
+Median: 100676500277824.0
+Standard Deviation: 4.5429963931276634e+17
+Minimum Value: 247391838225.0
+Maximum Value: 3.2059295730815826e+18
 
 class_matrix: 3
-Mean: 3.9024335189323187
-Median: 3.89704142265931
-Standard Deviation: 0.07903729518548461
-Minimum Value: 3.6998903370547445
-Maximum Value: 4.0
+Mean: 208913468967.55
+Median: 60285471961.0
+Standard Deviation: 655014752454.431
+Minimum Value: 10284393744.0
+Maximum Value: 6387877130625.0
 
 class_matrix: 6
-Mean: 3.479792921628502
-Median: 3.7954913558220715
-Standard Deviation: 0.5691685150998631
-Minimum Value: 2.45658244603379
-Maximum Value: 4.0
+Mean: 610381990785.375
+Median: 141305710429.0
+Standard Deviation: 1263621849076.1223
+Minimum Value: 8165652496.0
+Maximum Value: 5266318163716.0
 
 class_matrix: 7
-Mean: 2.466631818342434
-Median: 1.700232407517817
-Standard Deviation: 1.3672311062273048
+Mean: 66117253999.52
+Median: 4063425025.0
+Standard Deviation: 216835858539.06482
 Minimum Value: 1.0
-Maximum Value: 4.0
+Maximum Value: 923767032384.0
 
 spectral clustering k=2
-silhouette score: -0.04528277611668971
+silhouette score: 0.063232394792473
 
 spectral clustering k=3
-silhouette score: -0.07698521401328724
+silhouette score: -0.12574724967241038
 
 spectral clustering k=4
-silhouette score: -0.08484662330170732
+silhouette score: -0.8123473161830655
 
 PART 3!!:
 dot kernel
 class_matrix: 1
-Mean: 0.9999999999999998
-Median: 0.9999999999999998
+Mean: 36343885.0
+Median: 36343885.0
 Standard Deviation: 0.0
-Minimum Value: 0.9999999999999998
-Maximum Value: 0.9999999999999998
+Minimum Value: 36343885.0
+Maximum Value: 36343885.0
 
 class_matrix: 2
-Mean: 0.9512996822656108
-Median: 0.9730429219996204
-Standard Deviation: 0.057624777320871304
-Minimum Value: 0.7928042646298192
-Maximum Value: 1.0000000000000002
+Mean: 84707314.1632653
+Median: 10033767.0
+Standard Deviation: 267630438.51785988
+Minimum Value: 497384.0
+Maximum Value: 1790510980.0
 
 class_matrix: 3
-Mean: 0.9753559981960279
-Median: 0.9740925564128637
-Standard Deviation: 0.020054907710913106
-Minimum Value: 0.923509900430654
-Maximum Value: 1.0000000000000002
+Mean: 342426.13
+Median: 245530.0
+Standard Deviation: 302749.2850652386
+Minimum Value: 101411.0
+Maximum Value: 2527424.0
 
 class_matrix: 6
-Mean: 0.8587213267390434
-Median: 0.9481852759627538
-Standard Deviation: 0.15794920434732357
-Minimum Value: 0.5673488590718372
-Maximum Value: 1.0000000000000002
+Mean: 562501.625
+Median: 370874.0
+Standard Deviation: 542192.5743252893
+Minimum Value: 90363.0
+Maximum Value: 2294845.0
 
 class_matrix: 7
-Mean: 0.5054497958777128
-Median: 0.3039296022093436
-Standard Deviation: 0.44749606750695176
+Mean: 112369.32
+Median: 63744.0
+Standard Deviation: 231279.40933558613
 Minimum Value: 0.0
-Maximum Value: 1.0000000000000002
+Maximum Value: 961127.0
 
 spectral clustering k=2
-silhouette score: 0.0507299662630699
+silhouette score: 0.08320696226484069
 
 spectral clustering k=3
-silhouette score: -0.0564392418859859
+silhouette score: -0.5812461066454849
 
 spectral clustering k=4
-silhouette score: -0.4483034215684563
+silhouette score: -0.4103802675750889
 
 poly kernel
 class_matrix: 1
-Mean: 3.999999999999999
-Median: 3.999999999999999
+Mean: 1320878049580996.0
+Median: 1320878049580996.0
 Standard Deviation: 0.0
-Minimum Value: 3.999999999999999
-Maximum Value: 3.999999999999999
+Minimum Value: 1320878049580996.0
+Maximum Value: 1320878049580996.0
 
 class_matrix: 2
-Mean: 3.810891064971154
-Median: 3.8928983720528003
-Standard Deviation: 0.2206607955000648
-Minimum Value: 3.214147131274867
-Maximum Value: 4.0
+Mean: 7.880138086343074e+16
+Median: 100676500277824.0
+Standard Deviation: 4.5429963931276634e+17
+Minimum Value: 247391838225.0
+Maximum Value: 3.2059295730815826e+18
 
 class_matrix: 3
-Mean: 3.9024335189323187
-Median: 3.89704142265931
-Standard Deviation: 0.07903729518548461
-Minimum Value: 3.6998903370547445
-Maximum Value: 4.0
+Mean: 208913468967.55
+Median: 60285471961.0
+Standard Deviation: 655014752454.431
+Minimum Value: 10284393744.0
+Maximum Value: 6387877130625.0
 
 class_matrix: 6
-Mean: 3.479792921628502
-Median: 3.7954913558220715
-Standard Deviation: 0.5691685150998631
-Minimum Value: 2.45658244603379
-Maximum Value: 4.0
+Mean: 610381990785.375
+Median: 141305710429.0
+Standard Deviation: 1263621849076.1223
+Minimum Value: 8165652496.0
+Maximum Value: 5266318163716.0
 
 class_matrix: 7
-Mean: 2.466631818342434
-Median: 1.700232407517817
-Standard Deviation: 1.3672311062273048
+Mean: 66117253999.52
+Median: 4063425025.0
+Standard Deviation: 216835858539.06482
 Minimum Value: 1.0
-Maximum Value: 4.0
+Maximum Value: 923767032384.0
 
 spectral clustering k=2
-silhouette score: -0.04528277611668971
+silhouette score: 0.29983986384897
 
 spectral clustering k=3
-silhouette score: -0.09626075529879664
+silhouette score: 0.7629542041328409
 
 spectral clustering k=4
-silhouette score: -0.1735341640269269
+silhouette score: -0.7615254569227531
 
